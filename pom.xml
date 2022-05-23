@@ -81,14 +81,14 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${surefire.version}</version>
         <configuration>
-          <testFailureIgnore>true</testFailureIgnore>
+          <testFailureIgnore>false</testFailureIgnore>
           <argLine>
             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
           </argLine>
           <systemProperties>
             <property>
               <name>allure.results.directory</name>
-              <value>${project.build.directory}/allure-results</value>
+              <value>${project.build.directory}/target/allure-results</value>
             </property>
           </systemProperties>
         </configuration>
