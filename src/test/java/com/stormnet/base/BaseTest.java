@@ -12,11 +12,13 @@ import com.stormnet.pages.SummerDressPage;
 import com.stormnet.pages.TShirtsPage;
 import com.stormnet.pages.WomenPage;
 import io.qameta.allure.selenide.AllureSelenide;
+import io.qameta.allure.selenide.LogType;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.Level;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -67,7 +69,11 @@ public class BaseTest {
     public void begin() {
         SelenideLogger.addListener(ALLURE, new AllureSelenide()
                 .savePageSource(Configuration.savePageSource)
-                .screenshots(Configuration.screenshots));
+                .screenshots(Configuration.screenshots)
+                .enableLogs(LogType.BROWSER, Level.SEVERE)
+                .enableLogs(LogType.CLIENT, Level.SEVERE)
+                .enableLogs(LogType.SERVER, Level.SEVERE)
+                .enableLogs(LogType.PERFORMANCE, Level.SEVERE));
         Selenide.open("/");
     }
 
