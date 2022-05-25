@@ -2,6 +2,8 @@ package com.stormnet.pages;
 
 import com.codeborne.selenide.Selenide;
 import com.stormnet.base.BaseTest;
+import com.stormnet.service.ui.Feature;
+import com.stormnet.service.ui.ScreenshotService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -74,5 +76,10 @@ public class AllTest extends BaseTest {
         Assertions.assertTrue(Selenide.$(".color_pick.selected").exists());
         summerDressPage.clickYellowColorButton();
         Assertions.assertTrue(Selenide.$(".color_pick.selected").exists());
+    }
+
+    @Test
+    public void screenShotTest() {
+        ScreenshotService.uiExecutor(Feature.EXAMPLE);
     }
 }
