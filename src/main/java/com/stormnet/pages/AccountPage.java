@@ -2,38 +2,40 @@ package com.stormnet.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import org.openqa.selenium.By;
+import com.codeborne.selenide.SelenideElement;
 
 public class AccountPage {
 
-    private static final By SELECTOR_DRESSES_BUTTON = By.cssSelector("a[title='Dresses']");
-    private static final By SELECTOR_CASUAL_DRESSES_BUTTON = By.cssSelector("a[title='Casual Dresses']");
-    private static final By SELECTOR_SUMMER_DRESSES_BUTTON = By.cssSelector("a[title='Summer Dresses']");
-    private static final By SELECTOR_CATEGORY_NAME = By.cssSelector(".category-name");
-    private static final By SELECTOR_ACCOUNT_BUTTON = By.cssSelector(".account");
-    private static final By SELECTOR_MY_WISHLIST_BUTTON = By.cssSelector("a[title='My wishlists']");
-    private static final By SELECTOR_FIRST_WISHLIST_PRODUCT = By.cssSelector("td:nth-child(1) > a");
-    private static final By SELECTOR_REMOVE_WISHLIST_PRODUCT = By.cssSelector("td a .icon-remove");
+    private static final SelenideElement SELECTOR_DRESSES_BUTTON = Selenide.$$("a[title='Dresses']").get(1);
+    private static final SelenideElement SELECTOR_CASUAL_DRESSES_BUTTON =
+            Selenide.$$("a[title='Casual Dresses']").get(1);
+    private static final SelenideElement SELECTOR_SUMMER_DRESSES_BUTTON =
+            Selenide.$$("a[title='Summer Dresses']").get(1);
+    private static final SelenideElement SELECTOR_CATEGORY_NAME = Selenide.$(".category-name");
+    private static final SelenideElement SELECTOR_ACCOUNT_BUTTON = Selenide.$(".account");
+    private static final SelenideElement SELECTOR_MY_WISHLIST_BUTTON = Selenide.$("a[title='My wishlists']");
+    private static final SelenideElement SELECTOR_FIRST_WISHLIST_PRODUCT = Selenide.$("td:nth-child(1) > a");
+    private static final SelenideElement SELECTOR_REMOVE_WISHLIST_PRODUCT = Selenide.$("td a .icon-remove");
 
     public void openCasualDresses() {
-        Selenide.$$(SELECTOR_DRESSES_BUTTON).get(1).hover();
-        Selenide.$$(SELECTOR_CASUAL_DRESSES_BUTTON).get(1).click();
-        Selenide.$(SELECTOR_CATEGORY_NAME).shouldHave(Condition.text("Casual Dresses"));
+        SELECTOR_DRESSES_BUTTON.hover();
+        SELECTOR_CASUAL_DRESSES_BUTTON.click();
+        SELECTOR_CATEGORY_NAME.shouldHave(Condition.text("Casual Dresses"));
     }
 
     public void openSummerDresses() {
-        Selenide.$$(SELECTOR_DRESSES_BUTTON).get(1).hover();
-        Selenide.$$(SELECTOR_SUMMER_DRESSES_BUTTON).get(1).click();
-        Selenide.$(SELECTOR_CATEGORY_NAME).shouldHave(Condition.text("Summer Dresses"));
+        SELECTOR_DRESSES_BUTTON.hover();
+        SELECTOR_SUMMER_DRESSES_BUTTON.click();
+        SELECTOR_CATEGORY_NAME.shouldHave(Condition.text("Summer Dresses"));
     }
 
     public void clickAccountButton() {
-        Selenide.$(SELECTOR_ACCOUNT_BUTTON).click();
-        Selenide.$(SELECTOR_MY_WISHLIST_BUTTON).click();
-        Selenide.$(SELECTOR_FIRST_WISHLIST_PRODUCT).click();
+        SELECTOR_ACCOUNT_BUTTON.click();
+        SELECTOR_MY_WISHLIST_BUTTON.click();
+        SELECTOR_FIRST_WISHLIST_PRODUCT.click();
     }
 
     public void removeWishList() {
-        Selenide.$(SELECTOR_REMOVE_WISHLIST_PRODUCT).click();
+        SELECTOR_REMOVE_WISHLIST_PRODUCT.click();
     }
 }

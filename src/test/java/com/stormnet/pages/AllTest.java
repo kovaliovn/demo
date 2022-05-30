@@ -67,7 +67,7 @@ public class AllTest extends BaseTest {
         signInPage.clickSignInButton();
         signInPage.signIn("kovaliovn92@gmail.com", "Genius1992");
         accountPage.openSummerDresses();
-        summerDressPage.clickMoreButton(0);
+        summerDressPage.clickMoreButton();
         summerDressPage.clickBlackColorButton();
         Assertions.assertTrue(Selenide.$(".color_pick.selected").exists());
         summerDressPage.clickBlueColorButton();
