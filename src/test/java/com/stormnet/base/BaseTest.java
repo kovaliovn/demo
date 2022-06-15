@@ -17,7 +17,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Level;
@@ -42,7 +41,7 @@ public class BaseTest {
     protected final SummerDressPage summerDressPage = new SummerDressPage();
 
     @BeforeAll
-    public static void setUp() throws MalformedURLException {
+    public static void setUp() {
         properties = new Properties();
         readManagerPropertyFile();
         Configuration.baseUrl = properties.getProperty("automationpractice.site.url");
