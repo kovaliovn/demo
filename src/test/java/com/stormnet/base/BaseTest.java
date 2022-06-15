@@ -45,10 +45,9 @@ public class BaseTest {
         properties = new Properties();
         readManagerPropertyFile();
         Configuration.baseUrl = properties.getProperty("automationpractice.site.url");
-        //Configuration.browser = properties.getProperty("browser");
-        //Configuration.browserVersion = properties.getProperty("browserVersion");
+        Configuration.browser = properties.getProperty("browser");
         Configuration.browserSize = properties.getProperty("browserSize");
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        //Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.timeout = Long.parseLong(properties.getProperty("timeout"));
         DesiredCapabilities capabilities = new DesiredCapabilities();
         if (Configuration.browser.equals("firefox")) {
@@ -64,12 +63,12 @@ public class BaseTest {
         // If set to true, sets value by javascript instead of using Selenium built-in "sendKey"
         // function (that is quite slow because it sends every character separately).
         Configuration.fastSetValue = true;
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("browserVersion", "101.0");
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
+//        capabilities.setCapability("browserName", "chrome");
+//        capabilities.setCapability("browserVersion", "101.0");
+//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+//                "enableVNC", true,
+//                "enableVideo", true
+//        ));
         Configuration.browserCapabilities = capabilities;
     }
 
