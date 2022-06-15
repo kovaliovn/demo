@@ -8,10 +8,10 @@ services:
     volumes:
       - ".:/etc/selenoid" # path to browser.json
       - "/var/run/docker.sock:/var/run/docker.sock" # system properties
-      - "E:\\OneDrive\\Documents\\demo\\build\\reports\\video:/opt/selenoid/video" # path to video
-      - "./build/reports/logs/:/opt/selenoid/logs/" # path to log
+      - "./build/reports/video:/opt/selenoid/video" # path to video
+      - "./build/reports/logs/:/opt/selenoid/logs//" # path to log
     environment:
-      - "OVERRIDE_VIDEO_OUTPUT_DIR=E:\\OneDrive\\Documents\\demo\\build\\reports\\video"
+      - "OVERRIDE_VIDEO_OUTPUT_DIR=./build/reports/video:/opt/selenoid/video"
     command: [ "-conf", "/etc/selenoid/browsers.json", # path to browser.json in container
                "-video-output-dir", "/opt/selenoid/video/", # path to video in container
                "-log-output-dir", "/opt/selenoid/logs", "-capture-driver-logs", # path to log in container
@@ -30,9 +30,18 @@ services:
     networks:
       - default
 
+  newman:
+    image: postman/newman:5.2.2-alpine
+    container_name: newman-rash
+    volumes:
+      - ./api:/resources
+    command: >
+      run "/resources/Petstore.postman_collection.json"  \
+        --reporters cli,junit \
+        --reporter-junit-export="/resources/reports/rash-newman-report.xml"
+    networks:
+      - default
+
 networks:
   default:
     name: automation_default
-
-
-

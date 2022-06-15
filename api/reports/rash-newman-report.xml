@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Swagger Petstore" tests="21" time="3.813">
+  <testsuite name="pet / {pet Id} / Find pet by ID" id="885fb772-3a81-417f-a497-ac1ff5f5e607" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.631"/>
+  <testsuite name="pet / {pet Id} / Updates a pet in the store with form data" id="50f25710-98bd-4184-9efd-47530dd49a2c" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.142"/>
+  <testsuite name="pet / {pet Id} / Deletes a pet" id="60aa370c-421a-4c3f-b762-0c9d2a6bce8e" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.137"/>
+  <testsuite name="pet / {pet Id} / uploads an image" id="f9fd0419-1e0d-40c7-94d7-f76fc32354e8" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.136"/>
+  <testsuite name="pet / Add a new pet to the store" id="54cef5b2-5142-4e2d-a018-d5f7e164131c" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.140"/>
+  <testsuite name="pet / Update an existing pet" id="783e3ab3-4604-4f1c-84ef-30631b40b49f" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.133"/>
+  <testsuite name="pet / Finds Pets by status" id="13e59bb9-063a-453f-9aff-9f6a4d335f57" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.636"/>
+  <testsuite name="pet / Finds Pets by tags" id="dad5bfd8-63a2-428d-a728-116fe241e773" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.131"/>
+  <testsuite name="store / order / {order Id} / Find purchase order by ID" id="cffc0a9f-56aa-4c10-a5a1-b55b1cdb6d86" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.133"/>
+  <testsuite name="store / order / {order Id} / Delete purchase order by ID" id="f34968bc-cbf4-48d4-8173-dfdc8e89ce47" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.136"/>
+  <testsuite name="store / order / Place an order for a pet" id="aeee331f-aeeb-4f2c-8f7b-8692ebfe547a" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.145"/>
+  <testsuite name="store / Returns pet inventories by status" id="e08da3a3-7327-4965-a598-ec31a9672f04" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.130"/>
+  <testsuite name="store / Subscribe to the Store events" id="d9f651ac-cf78-4add-a747-5dc801c69bc2" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.130"/>
+  <testsuite name="user / {username} / Get user by user name" id="88d67616-8db9-4969-b4ec-9598788fb14a" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.131"/>
+  <testsuite name="user / {username} / Updated user" id="5c575f76-37d5-4441-b920-6b72b391f20b" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.132"/>
+  <testsuite name="user / {username} / Delete user" id="c49eacca-4d24-4def-a12a-31bba4c3413c" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.130"/>
+  <testsuite name="user / Create user" id="ff9bea56-bf71-4edb-a458-d23127c91b19" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.131"/>
+  <testsuite name="user / Creates list of users with given input array" id="42ca69a9-2524-4d78-8349-efe9de1d2c74" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.134"/>
+  <testsuite name="user / Creates list of users with given input array" id="645f17a2-74a0-435f-8042-c453b615efc5" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.132"/>
+  <testsuite name="user / Logs user into the system" id="67d110ef-ed5c-4537-b7ce-b6eec65ac16d" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.130"/>
+  <testsuite name="user / Logs out current logged in user session" id="fb78e1ba-d743-4903-92c5-6206eaeb0ed1" timestamp="2022-06-08T18:54:46.381Z" tests="0" failures="0" errors="0" time="0.133"/>
+</testsuites>
